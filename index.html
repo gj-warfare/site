@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>GJ Warfare</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Import Roboto font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Your stylesheet -->
+  <title>Download Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">GJ Warfare</div>
-  
-  <!-- Main content area -->
+  <div class="header">My Project</div>
+
   <div class="main">
-    <p>Welcome to the Official GJ Warfare website</p>
+    <p>Select a file to download:</p>
     <div class="download-section">
-      <button onclick="window.location.href='GJ Warfare v1.exe'" class="download-button">
-        ⬇ Download GJ Warfare (.exe)
-      </button>
+      <div class="dropdown">
+        <select id="fileDropdown">
+          <option value="">-- Choose a file --</option>
+          <option value="file1.pdf">File 1 (PDF)</option>
+          <option value="file2.docx">File 2 (Word)</option>
+          <option value="file3.xlsx">File 3 (Excel)</option>
+        </select>
+      </div>
+      <button class="download-button" onclick="downloadFile()">Download</button>
     </div>
   </div>
 
-  <!-- Black square trigger -->
-  <div class="video-trigger" onclick="window.location.href='IMG_0599.mov'"></div>
+  <div class="footer">© 2025 My Project</div>
 
-  <div class="footer">© 2025 GJ Warfare</div>
+  <div class="video-trigger"></div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
