@@ -1,18 +1,14 @@
-function downloadVersion() {
-  const select = document.getElementById("download-select");
-  const version = select.value;
+function toggleDropdown() {
+  const menu = document.getElementById("dropdown-menu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
 
-  if (!version) {
-    alert("Please select a version to download.");
-    return;
-  }
-
-  // Redirect to version-specific file
-  if (version === "v1.0") {
-    window.location.href = "downloads/version1.zip";
-  } else if (version === "v2.0") {
-    window.location.href = "downloads/version2.zip";
-  } else if (version === "v3.0") {
-    window.location.href = "downloads/version3.zip";
+// Optional: close dropdown if clicked outside
+window.onclick = function(event) {
+  if (!event.target.matches('.download-button')) {
+    const menu = document.getElementById("dropdown-menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    }
   }
 }
